@@ -8,12 +8,7 @@
   --accent-fon-color: #2f303a;
   --team-fon-color: #f5f4fa;
 }
-/* 1170 всього
-30
-70
-15 відступи gatter 30
 
-*/
 body {
   margin: 0;
   background-color: var(--margin-white-color);
@@ -21,6 +16,26 @@ body {
 
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
+}
+
+/* utylyti */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .container {
@@ -32,12 +47,6 @@ body {
 
 .pointer {
   cursor: pointer;
-}
-
-.list {
-  margin-top: 0;
-  margin-bottom: 0;
-  list-style: none;
 }
 
 .link {
@@ -75,10 +84,18 @@ body {
 
 .section-padding {
   padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* header */
+.page-header {
+  border: 1px solid #ececec;
+}
 .main-header {
+  display: flex;
+  align-items: center;
+}
+.site-nav {
   display: flex;
   align-items: center;
 }
@@ -108,8 +125,7 @@ body {
 }
 
 /* nav */
-.site-nav {
-}
+
 .nav-list {
   display: flex;
   padding-left: 0;
@@ -149,8 +165,10 @@ body {
 }
 
 .hero-title {
-  margin-top: 0;
-  margin-bottom: 30;
+  max-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
 
   text-transform: uppercase;
   color: var(--margin-white-color);
@@ -218,10 +236,6 @@ body {
   text-align: center;
 }
 
-.project-img {
-  display: block;
-}
-
 .project-list .item + .item {
   margin-left: 30px;
 }
@@ -261,12 +275,11 @@ body {
   background-color: var(--margin-white-color);
 }
 
-.pic-team {
-  margin-bottom: 30px;
+.team-content {
+  padding: 30px 0;
 }
 
 .team .caption {
-  margin-top: 0;
   margin-bottom: 10px;
 
   font-weight: 500;
@@ -276,10 +289,6 @@ body {
 }
 
 .team .text {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-bottom: 30px;
-
   color: var(--title-text-color);
   font-size: 16px;
   line-height: 1.18;
@@ -330,7 +339,7 @@ body {
 }
 
 .address .item:not(:last-child) {
-  padding-bottom: 9px;
+  margin-bottom: 9px;
 }
 
 /* portfolio */
@@ -373,29 +382,25 @@ body {
   display: flex;
   flex-wrap: wrap;
   padding-left: 0;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
-.portfolio .items {
-  width: 370px;
-  margin-right: 30px;
-  margin-bottom: 30px;
+.portfolio > .items {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
-.portfolio .items:nth-child(3n) {
-  margin-right: 0;
-}
-.portfolio .items:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-}
-
-.portfolio-img {
-  display: block;
+.portfolio-content {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
 }
 
 .portfolio .title {
   margin-top: 0;
   margin-bottom: 4px;
-  padding: 20px 24px 0 24px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -405,7 +410,7 @@ body {
 .portfolio .text {
   margin-top: 0;
   margin-bottom: 0;
-  padding: 0 24px 20px 24px;
+
   color: var(--title-text-color);
   font-size: 16px;
   line-height: 1.87;
