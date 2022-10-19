@@ -89,7 +89,7 @@ img {
 
 /* header */
 .page-header {
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 .main-header {
   display: flex;
@@ -160,6 +160,8 @@ img {
 
 /* section hero */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
   text-align: center;
   background-color: var(--accent-fon-color);
 }
@@ -179,6 +181,7 @@ img {
 }
 
 .hero .button {
+  border: none;
   border-radius: 4px;
   padding: 10px 32px;
 
@@ -198,6 +201,9 @@ img {
 }
 
 /* section features */
+.features {
+  padding-top: 94px;
+}
 .features-title {
   display: flex;
   padding-left: 0;
@@ -205,6 +211,9 @@ img {
 
 .features-title .item + .item {
   margin-left: 30px;
+}
+.features-title > .item {
+  flex-basis: calc(100% / 4);
 }
 
 .features .title {
@@ -298,18 +307,15 @@ img {
 /* footer */
 
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   background-color: var(--accent-fon-color);
 }
 
 .footer-logo {
   display: inline-block;
-  padding-top: 60px;
   margin-bottom: 20px;
-}
-
-.address {
-  padding-left: 0;
-  padding-bottom: 60px;
 }
 
 .link-maps {
@@ -360,6 +366,7 @@ img {
 }
 
 .function .button {
+  border: none;
   border-radius: 4px;
   padding: 6px 22px;
 
@@ -395,6 +402,7 @@ img {
 .portfolio-content {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 .portfolio .title {
